@@ -14,6 +14,9 @@
     and from which I took all the topics and most styles. Partly out of laziness, but also to allow comparing
     results between these two projects.
 
+    That version has much nicer UI, but this one has reproducible results and consistent seed across images
+    which leads to interesting effects.
+
     <h2>Source</h2>
     <a href="https://github.com/lacop/sdgrid">https://github.com/lacop/sdgrid</a>
 
@@ -26,7 +29,11 @@
     <h2>How long did it take?</h2>
     Images were generated on a single GCP instance with NVIDIA A100 40GB with <code>batch_size=4</code>
     (the largest size before diminishing returns), each prompt taking around 12 seconds
-    to generate four images.
+    to generate four images. Do the math :)
+
+    <h2>Prompt suggestions, feature requests, bug fixes?</h2>
+    Feel free to open an issue or (even better) send a pull request. But please note this is a small weekend project, I
+    might not have time to do what you want. You can always fork it!
 </body>
 
 </html>
