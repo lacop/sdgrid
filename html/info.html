@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Stable Diffusion Image Grid - Info</title>
+</head>
+
+<body>
+    <h1>About this project</h1>
+    <a href="index.html">Return to main page</a>
+
+    <h2>Credits</h2>
+    Inspired by <a href="https://generrated.com/">https://generrated.com</a> which did this for DALL-E 2,
+    and from which I took all the topics and most styles. Partly out of laziness, but also to allow comparing
+    results between these two projects.
+
+    <h2>Source</h2>
+    <a href="https://github.com/lacop/sdgrid">https://github.com/lacop/sdgrid</a>
+
+    <h2>Reproducible results</h2>
+    All images use the seeds <code>42, 43, 44, 45</code>. Settings used: 75 steps, 512x512, LMS sampler, scale 7.
+    <br>
+    The version of the SD repository is referenced in the Github README.
+    You should be able to reproduce all the images.
+
+    <h2>How long did it take?</h2>
+    Images were generated on a single GCP instance with NVIDIA A100 40GB with <code>batch_size=4</code>
+    (the largest size before diminishing returns), each prompt taking around 12 seconds
+    to generate four images.
+</body>
+
+</html>

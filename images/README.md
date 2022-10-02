@@ -1,0 +1,1 @@
+Empty placeholder for thumbnails and jpgs.

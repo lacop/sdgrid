@@ -1,0 +1,5 @@
+html/index.html
+images/*
+!images/README.md
+outputs/*
+!outputs/README.md

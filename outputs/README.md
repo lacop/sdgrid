@@ -1,0 +1,1 @@
+Empty placeholder for raw Stable Diffusion outputs.
