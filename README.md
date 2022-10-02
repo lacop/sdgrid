@@ -34,3 +34,7 @@ This is a collection of scripts held together by duct tape, but it works fine fo
 
    This assumes you use [Bunny CDN](https://bunny.net) which I picked for no
    particular reason.
+
+## License
+
+The code under `scripts/` is released under MIT license.
