@@ -27,8 +27,11 @@ content = """
             border: 1px solid darkgrey;
             border-collapse: collapse;
         }
-        td img {
-            padding: 2px;
+        td img.large {
+            padding: 0 0 2px 0;
+        }
+        td a:nth-child(4) img {
+            padding: 0 1px;
         }
         #sidebar {
             position: fixed;
@@ -60,8 +63,12 @@ content = """
         #close {
             font-size: 200%;
         }
+        p.jump {
+            max-width: 70%;
+        }
         a.jump {
             padding-left: 1ex;
+            display: inline-block;
         }
     </style>
 </head>
@@ -81,7 +88,7 @@ Each prompt has <em>{}</em> variants (seeds) for a total of <strong>{}</strong> 
 content += '<p>All prompts use the same set of seeds which gives an interesting view '
 content += 'how the style affects the result. Check out <a href="info.html">more info</a> '
 content += 'including source code.</p>'
-content += '<p>Jump to category: '
+content += '<p class="jump">Jump to category: '
 categories = {}
 for style in styles:
     if style['category'] not in categories:
@@ -110,16 +117,14 @@ for style in styles:
         prompt = style['prompt'].replace('$1', topic['topic'])
         content += '<td>'
         for i in [0]:
-        #for i in range(IMAGE_COUNT):
             filename = filename_for(prompt, i)
-            content += '<a href="{}{}{}.jpg"><img width=256 height=256 loading="lazy" src="{}{}{}.jpg"/></a>'.format(
+            content += '<a href="{}{}{}.jpg"><img width=256 height=256 class="large" loading="lazy" src="{}{}{}.jpg"/></a>'.format(
                 url_prefix, '512/', filename,
                 url_prefix, '256/', filename)
         content += "<br>"
         for i in range(IMAGE_COUNT)[1:]:
-        #for i in range(IMAGE_COUNT):
             filename = filename_for(prompt, i)
-            content += '<a href="{}{}{}.jpg"><img width=85 height=85 loading="lazy" src="{}{}{}.jpg"/></a>'.format(
+            content += '<a href="{}{}{}.jpg"><img width=84 height=84 loading="lazy" src="{}{}{}.jpg"/></a>'.format(
                 url_prefix, '512/', filename,
                 url_prefix, '256/', filename)
         content += '</td>'
