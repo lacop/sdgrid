@@ -11,7 +11,7 @@ bucket = os.environ.get('CDN_BUCKET', 'sdgrid')
 obj_storage = Storage(api_key, bucket)
 
 def sync_prefix(local_prefix, cdn_prefix, pattern):
-    print(f'Syncing {prefix}')
+    print(f'Syncing {local_prefix} -> {cdn_prefix}')
 
     local_files = set([
         f[len(local_prefix)+1:]
