@@ -22,6 +22,7 @@ content = """
 <!doctype html>
 <html>
 <head>
+    <meta name="viewport" content="minimum-scale=1">
     <style>
         table, tr, td {
             border: 1px solid darkgrey;
@@ -38,8 +39,10 @@ content = """
             top: 3em;
             right: 3em;
             border: 1px solid black;
-            padding: 1em;
+            padding: 1ex;
             background: white;
+            max-width: 90%;
+            max-height: 90%;
         }
         #sidebar-content {
             display: none;
@@ -49,19 +52,27 @@ content = """
         }
         #prompt {
             background: lightgrey;
-            padding: 2ex;
+            padding: 1ex;
             display: inline-block;
-            width: 90%;
         }
         #topic {
             background: lightyellow;
-            padding: 1ex;
+            padding: 0.5ex;
+            display: inline-block;
         }
         #images {
             max-width: 1050px;
         }
+        #images img {
+            max-width: 45%;
+            height: auto;
+        }
         #close {
             font-size: 200%;
+            position: absolute;
+            top: 1ex;
+            right: 1ex;
+            background-color: orangered;
         }
         p.jump {
             max-width: 70%;
