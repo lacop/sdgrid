@@ -23,13 +23,13 @@ This is a collection of scripts held together by duct tape, but it works fine fo
 1. Generate the webpage. You can do this while the images are being generated.
    ```
    python scripts/generate_webpage.py
-   API_KEY=... LOCAL_HTML_DIR=html ./scripts/upload.py
+   API_KEY=... LOCAL_HTML_DIR=html python scripts/upload.py
    ```
 1. Convert the results to jpg and generate thumbnails. Upload the results to CDN.
    
    ```
    ./scripts/prepare_images.sh
-   API_KEY=... LOCAL_IMAGE_DIR=images ./scripts/upload.py
+   API_KEY=... LOCAL_IMAGE_DIR=images python scripts/upload.py
    ```
 
    This assumes you use [Bunny CDN](https://bunny.net) which I picked for no
@@ -37,4 +37,4 @@ This is a collection of scripts held together by duct tape, but it works fine fo
 
 ## License
 
-The code under `scripts/` is released under MIT license.
+The code under `scripts/` is released under MIT license.A
